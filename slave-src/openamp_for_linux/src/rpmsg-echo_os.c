@@ -202,8 +202,7 @@ static int rpmsg_endpoint_cb(struct rpmsg_endpoint* ept, void* data, size_t len,
 		//printf("success!设置小车方向为：%s,设置期望速度为：%f，设置舵机脉冲为：%d\r\n", (motor_target_speed >= 0) ? "前进" : "后退", motor_target_speed, pwm_steer_pulse);
 	}
 	
-
-		return RPMSG_SUCCESS;
+	return RPMSG_SUCCESS;
 }
 /*-----------------------------------------------------------------------------*
  *  Function Name:          rpmsg_service_unbind
