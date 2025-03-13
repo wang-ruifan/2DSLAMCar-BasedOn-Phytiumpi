@@ -1,6 +1,6 @@
 # 基于飞腾派多核异构的2d激光SLAM小车
 
-# For English version, please click [here](#2d-slam-car-basedon-phytiumpi)
+## For English version, please click [here](#2d-slam-car-basedon-phytiumpi)
 
 ## 仓库说明
 这是我参加2024年第八届全国大学生集成电路创新大赛-飞腾杯的项目，题目为基于飞腾多核异构处理器的创新应用开发。  
