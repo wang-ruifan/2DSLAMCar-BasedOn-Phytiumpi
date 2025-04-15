@@ -25,7 +25,7 @@
 - 主核提供人机交互界面对小车进行控制，同时通过激光雷达和里程计数据融合建图
 
 ### 详细实现原理
-使用飞腾处理器，基于OpenAMP协议实现多核异构，首先四个核启动Ubuntu，然后切换为三个核运行Ubuntu(主核)，一个核运行FreeRTOS(从核)，利用RPMsg通信实现主核与从核的通信。
+使用飞腾处理器，基于OpenAMP协议实现多核异构，首先四个核启动Ubuntu，然后切换为三个核运行Ubuntu(主核)，一个核运行FreeRTOS(从核)，利用RPMsg通信实现主核与从核的通信。  
 ![总架构](images/Overall-architecture.png)
 
 #### 从核：FreeRTOS
@@ -39,7 +39,7 @@
 - 循环运行CarControlTask，根据连接红外传感器的引脚的电平，判断前方是否有障碍物，若有则期望速度调为0
 - 根据编码器脉冲数，得到电机实际速度
 - 调用PI控制器，根据实际速度和目标速度得到PWM输出脉冲数
-- 控制PWM输出特定脉冲数
+- 控制PWM输出特定脉冲数  
 ![从核架构](images/Slave-core-architecture.png)
 
 #### 主核：Ubuntu 22.04
@@ -52,7 +52,7 @@
 - 基于实时速度数据，对其进行转换并积分，得到base_link与odom之间的tf数据
 - 在/odom话题中发布里程计tf数据
 4. cartographer_node
-- ROS中运行Cartographer，基于2d激光雷达数据和里程计进行实时建图
+- ROS中运行Cartographer，基于2d激光雷达数据和里程计进行实时建图  
 ![主核架构](images/Master-core-architecture.png)
 
 ## 硬件架构
