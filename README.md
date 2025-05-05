@@ -143,7 +143,7 @@ make
 
 6. **!!! 启动 !!!**  
 将烧写好系统的SD卡插入飞腾派，连接HDMI显示器、键盘、鼠标，接入网线，开机即可**启动**Ubuntu系统。  
-普通用户名为user，root和user密码均为Phytium@123。
+普通用户名为user密码为user，管理员用户名为root密码为root。
 
 
 ### 使用虚拟机配置飞腾FreeRTOS编译环境
